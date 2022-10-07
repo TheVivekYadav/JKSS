@@ -11,38 +11,71 @@ ul li{
 }
 /* Top Bar Section */
 .topbar{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 10px 20px;
+    display: none;
 }
-.phone-number{
-    display: flex;
-    gap: 5rem;
-}
-.helpful-links{
-    display: flex;
-    gap: 5rem;
-    align-items: center;
-    justify-content: right;
+/* media queriess for top bar */
+
+@media (min-width:60em) {
+    .topbar{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 10px 20px;
+    }
+    .phone-number{
+        display: flex;
+        gap: 5rem;
+    }
+    .helpful-links{
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+        justify-content: right;
+    }
+    
 }
 
 /* Navigation Bar Section */
-
 .nav{
     padding: 10px 20px;
     display: grid;
     grid-template-columns: 50% 50%;
 }
 .nav-menu{
+    display: none;
+}
+.hamburger{
     display: flex;
+    justify-content: right;
     align-items: center;
-    justify-content: center;
+}
+.hamburger-image{
+    width: 32px;
+    height: 30px;
+}
+/* media queriess for navigation bar */
 
+@media (min-width:60em) {
+    .nav{
+        padding: 10px 20px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .nav-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .nav-menu ul{
+        display: flex;
+        gap: 3rem;
+    }
+    .hamburger{
+        display: none;
+    }
+    
 }
-.nav-menu ul{
-    display: flex;
-    gap: 3rem;
-}
+
 /* Image Slider Section */
 .sliderbar{
     width: 100vw;
@@ -50,44 +83,152 @@ ul li{
     justify-content: center;
     align-items: center; 
     height: 450px;
+    position: relative;
 }
 
 /* More Section here */
 
+.sections > div{
+    height: 300px;
+    border-radius: 10px;
+    background-color: grey;
+}
+.section > div{
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
 .sections{
     display: grid;
     gap: 2rem;
-    grid-template-areas: 'one three' 'two four';
+    grid-template-areas: 'one two' 'three four';
     padding: 10px 20px;
-    grid-template-columns: 3fr 1fr;
-}
-
-.sections > div{
-    height: 300px;
-    background-color: grey;
+    grid-template-columns: 1fr 1fr;
 }
 .section-one{
     grid-area: one;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-.section-two{
+    grid-template-columns: 1fr 2fr;
+    place-items: center;
+    place-content: center;
+    padding: 10px 20px;
+}.section-two{
     grid-area: two;
     display: grid;
     grid-template-columns: 2fr 1fr;
     place-items: center;
+    place-content: center;
+    padding: 10px 20px;
 }
-
-.section > div{
-    height: 250px;
-    background: #fff;
-}
-
 .section-three{
+    height: 250px;
     grid-area: three;
+    position: relative;
+    border-left: 10px solid pink;
+    border-radius: 10%;
 }
 .section-four{
+    height: 250px;
     grid-area: four;
+    position: relative;
+    border-left: 10px solid pink;
+    border-radius: 10%;
+}
+
+.section-one .img,
+.section-two .img,
+.img{
+    border-radius: 50%;
+}
+
+div .text{
+    font-size: 10px;
+}
+
+/* media queries for sections */
+@media (max-width:50em){
+    .sections{
+        display: grid;
+        gap: 2rem;
+        padding: 10px 20px;
+    grid-template-areas: 'one' 'two' 'three' 'four';
+    grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width:60em){
+    .sections{
+        display: grid;
+    gap: 2rem;
+    padding: 10px 20px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 'one three' 'two four';
+    }
+    .section-one{
+        grid-area: one;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        place-items: center;
+        place-content: center;
+        padding: 10px 20px;
+    }
+    .section-two{
+        grid-area: two;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        place-items: center;
+        place-content: center;
+        padding: 10px 20px;
+    }
+    .section-three{
+        height: 250px;
+        grid-area: three;
+        position: relative;
+        border-left: 10px solid pink;
+        border-radius: 10%;
+    }
+    .section-four{
+        height: 250px;
+        grid-area: four;
+        position: relative;
+        border-left: 10px solid pink;
+        border-radius: 10%;
+    }
+
+    
+    
+    .section-one .img,
+    .section-two .img,
+    .img{
+        border-radius: 50%;
+    }
+    
+div .text{
+    font-size: 1rem;
+}
+}
+
+.title{
+    width: 100%;
+    background-color: rgb(109, 96, 96);
+    padding: 10px 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.25rem;
+    border-radius: 10px;
+}
+.content{
+    width: 100%;
+    line-height: 3rem;
+    height:100%;
+    animation: scrollup 5s infinite;
+}
+.content ul{
+    margin-right: 10px;
+    background-color: #fff;
+    padding: 10px 20px;
+    height: 100%;
 }
 
 /* carousel Section*/
@@ -109,5 +250,15 @@ ul li{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
+}
+/* media queries */
+@media (max-width:50em){
+    .footbar{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 20px;
+        gap: 2rem;
+
+    }
 }
