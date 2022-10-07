@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+/* Top Bar Section */
+.topbar{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px 20px;
+}
+.phone-number{
+    display: flex;
+    gap: 5rem;
+}
+.helpful-links{
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    justify-content: right;
+}
+
+/* Navigation Bar Section */
+
+.nav{
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.nav-menu ul{
+    display: flex;
+    gap: 3rem;
+}
+/* Image Slider Section */
+.sliderbar{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 450px;
+}
+
+/* More Section here */
+
+.sections{
+    display: grid;
+    gap: 2rem;
+    grid-template-areas: 'one three' 'two four';
+    padding: 10px 20px;
+    grid-template-columns: 3fr 1fr;
+}
+
+.sections > div{
+    height: 300px;
+    background-color: grey;
+}
+.section-one{
+    grid-area: one;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.section-two{
+    grid-area: two;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+}
+
+.section > div{
+    height: 250px;
+    background: #fff;
+}
+
+.section-three{
+    grid-area: three;
+}
+.section-four{
+    grid-area: four;
+}
+
+/* carousel Section*/
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 250px;
+}
+
+/* footbar Section */
+.footbar{
+    display: grid;
+    grid-template-columns: 35% 30% auto;
+    padding: 10px 20px;
+}
+.footbar > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
