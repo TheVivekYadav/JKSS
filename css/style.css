@@ -9,6 +9,12 @@ a{
 ul li{
     list-style: none;
 }
+input:focus-visible{
+    outline: none;
+}
+input::placeholder{
+    font-size: 20px;
+}
 /* Top Bar Section */
 .topbar{
     display: none;
@@ -293,10 +299,24 @@ div .text{
     }
 }
 
+/* form area */
 .form1{
     display: grid;
     gap: 1rem;
 }
 .logo-image{
     width: clamp(1rem,50vw,20rem);
+}
+.form1 input{
+    border: none;
+}
+.form1 div.input{
+    border: 1px solid black;
+    padding: 10px 12px;
+    border-radius:10px ;
+}
+input[type="submit"]{
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
 }
