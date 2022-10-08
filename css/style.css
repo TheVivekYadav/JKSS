@@ -103,7 +103,7 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: clamp(150px, 100vw, 450px);
+    height: clamp(10px, 50vw, 450px);
     position: relative;
     border: 1px solid black;
 }
