@@ -89,9 +89,9 @@ ul li{
 /* More Section here */
 
 .sections > div{
-    height: 300px;
+    /* height: 300px; */
     border-radius: 10px;
-    background-color: grey;
+    /* background-color: grey; */
 }
 .section > div{
     background: #fff;
@@ -126,14 +126,18 @@ ul li{
     grid-area: three;
     position: relative;
     border-left: 10px solid pink;
+    border-bottom: 10px solid grey;
     border-radius: 10%;
+    background-color: grey;
 }
 .section-four{
     height: 250px;
     grid-area: four;
     position: relative;
     border-left: 10px solid pink;
+    border-bottom: 10px solid grey;
     border-radius: 10%;
+    background-color: grey;
 }
 
 .section-one .img,
@@ -216,12 +220,11 @@ div .text{
     text-align: center;
     color: #fff;
     font-size: 1.25rem;
-    border-radius: 10px;
 }
 .content{
     width: 100%;
     line-height: 3rem;
-    height:100%;
+    height:calc(100%-50px);
     animation: scrollup 5s infinite;
 }
 .content ul{
@@ -236,8 +239,15 @@ div .text{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 250px;
+    gap: 1rem;
+}
+.carousel > div{
+    width: 200px;
+    height: 100px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* footbar Section */
@@ -256,9 +266,15 @@ div .text{
 @media (max-width:50em){
     .footbar{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         padding: 10px 20px;
         gap: 2rem;
 
+    }
+    .footbar > div{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 2rem;
     }
 }

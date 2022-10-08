@@ -65,7 +65,7 @@
             <div class="section-three">
                 <div class="news-events title">News & Events</div>
             <div class="content">
-                <marquee direction="up" scrollamount="3">
+                <marquee direction="up" scrollamount="3"  onmouseover="this.stop()" onmouseout="this.start()">
                 <ul>
                     <li><a href="#">Links 1</a></li>
                     <li><a href="#">Links 2</a></li>
@@ -79,7 +79,7 @@
         <div class="section-four">
             <div class="exams title">Exams</div>
             <div class="content">
-            <marquee direction="up" scrollamount="3">
+            <marquee direction="up" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
                 <ul>
                     <li><a href="#">Links 1</a></li>
                     <li><a href="#">Links 2</a></li>
@@ -91,10 +91,14 @@
             </div>
         </div>
         </div>
-        <div class="carousel">
-            Carousel
-        </div>
-    </main>
+        <marquee behavior="alternate" direction="" onmouseover="this.stop()" onmouseout="this.start()">
+            <div class="carousel">
+                <div><a href="#">O-LEVEL</a></div>
+                <div><a href="#">CCC</a></div>
+                <div><a href="#">TALLY</a></div>
+                </div>
+    </marquee>
+        </main>
     <div class="footbar">
         <div class="logo"><img src="./images/logo.svg" alt=""></div>
         <div class="Menus">
