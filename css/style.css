@@ -274,7 +274,6 @@ div .text {
 .content {
     width: 100%;
     line-height: 3rem;
-    height: 100%;
     animation: scrollup 5s infinite;
 }
 
@@ -285,10 +284,6 @@ div .text {
     height: 100%;
 }
 
-/* carousel Section*/
-.carousel-main {
-    background-color: pink;
-}
 
 .carousel {
     display: flex;
