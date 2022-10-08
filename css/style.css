@@ -1,3 +1,8 @@
+:root {
+    --primary-clr-900: rgba(0, 0, 0, 0.329);
+    --primary-clr-500: grey;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -70,6 +75,16 @@ input::placeholder {
     height: 30px;
 }
 
+.nav-menu ul li a {
+    padding: 10px 20px;
+}
+
+.nav-menu ul li a:hover {
+    background-color: var(--primary-clr-500);
+    color: #fff;
+    transition: 500ms;
+}
+
 /* media queriess for navigation bar */
 
 @media (min-width:60em) {
@@ -88,7 +103,7 @@ input::placeholder {
 
     .nav-menu ul {
         display: flex;
-        gap: 3rem;
+        gap: 1rem;
     }
 
     .hamburger {
@@ -97,23 +112,12 @@ input::placeholder {
 
 }
 
-/* Image Slider Section */
-.sliderbar {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: clamp(10px, 50vw, 450px);
-    position: relative;
-    border: 1px solid black;
-}
 
 /* More Section here */
 
 .sections>div {
     /* height: 300px; */
     border-radius: 10px;
-    /* background-color: grey; */
 }
 
 .section>div {
@@ -150,18 +154,20 @@ input::placeholder {
 
 .section-three {
     grid-area: three;
-    border-left: 10px solid pink;
-    border-bottom: 7px solid pink;
+    border-left: 10px solid var(--primary-clr-500);
+    border-right: 10px solid var(--primary-clr-500);
+    border-bottom: 5px solid var(--primary-clr-500);
     border-radius: 10%;
-    background-color: grey;
+    background-color: var(--primary-clr-900);
 }
 
 .section-four {
     grid-area: four;
-    border-left: 10px solid pink;
-    border-bottom: 7px solid pink;
+    border-left: 10px solid var(--primary-clr-500);
+    border-right: 10px solid var(--primary-clr-500);
+    border-bottom: 5px solid var(--primary-clr-500);
     border-radius: 10%;
-    background-color: grey;
+    background-color: var(--primary-clr-900);
 }
 
 .section-one .img,
@@ -190,12 +196,15 @@ div .text {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-    .section-two .img{
+
+    .section-two .img {
         grid-area: one;
     }
-    .section-two .text{
+
+    .section-two .text {
         grid-area: two;
     }
+
     .section-two {
         display: grid;
         grid-template-columns: 1fr;
@@ -235,7 +244,6 @@ div .text {
         height: 250px;
         grid-area: three;
         position: relative;
-        border-left: 10px solid pink;
         border-radius: 10%;
     }
 
@@ -243,7 +251,6 @@ div .text {
         height: 250px;
         grid-area: four;
         position: relative;
-        border-left: 10px solid pink;
         border-radius: 10%;
     }
 
@@ -262,7 +269,7 @@ div .text {
 
 .title {
     width: 100%;
-    background-color: pink;
+    background-color: var(--primary-clr-500);
     padding: 10px 20px;
     text-align: center;
     color: #fff;
@@ -276,13 +283,17 @@ div .text {
 
 .content ul {
     /* margin-right: 10px; */
-    background-color: #fff;
+    /* background-color: #fff; */
     padding: 10px 20px;
     height: 100%;
 }
 
-.carousel-main{
-    background-color: pink;
+.content ul li a {
+    color: #fff;
+}
+
+.carousel-main {
+    background-color: var(--primary-clr-500);
 }
 
 .carousel {
@@ -290,6 +301,10 @@ div .text {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+.carousel a {
+    color: #fff;
 }
 
 .carousel>div {
@@ -357,4 +372,29 @@ input[type="submit"] {
     padding: 10px 15px;
     border: none;
     cursor: pointer;
+}
+
+/* Slider Section */
+
+/* Image Slider Section */
+.sliderbar {
+    height: clamp(10px, 50vw, 450px);
+    position: relative;
+    border: 1px solid black;
+    background-image: url("..//images/1.jpeg");
+    background-size: cover;
+    margin: clamp(1px, 50vw, 10px) clamp(1px, 50vw, 10px);
+    animation:slider 9s infinite linear;
+}
+
+@keyframes slider{
+    0%{
+    background-image: url(..//images/2.jpeg);
+    }
+    35%{
+    background-image: url(..//images/4.jpeg);
+    }
+    75%{
+    background-image: url(..//images/4.jpeg);
+    }
 }
