@@ -133,7 +133,7 @@ ul li{
     grid-area: three;
     position: relative;
     border-left: 10px solid pink;
-    border-bottom: 10px solid grey;
+    border-bottom: 7px solid pink;
     border-radius: 10%;
     background-color: grey;
 }
@@ -142,7 +142,7 @@ ul li{
     grid-area: four;
     position: relative;
     border-left: 10px solid pink;
-    border-bottom: 10px solid grey;
+    border-bottom: 7px solid pink;
     border-radius: 10%;
     background-color: grey;
 }
@@ -226,7 +226,7 @@ div .text{
 
 .title{
     width: 100%;
-    background-color: rgb(109, 96, 96);
+    background-color: pink;
     padding: 10px 20px;
     text-align: center;
     color: #fff;
@@ -235,7 +235,7 @@ div .text{
 .content{
     width: 100%;
     line-height: 3rem;
-    height:calc(100%-50px);
+    height: 100%;
     animation: scrollup 5s infinite;
 }
 .content ul{
@@ -246,6 +246,9 @@ div .text{
 }
 
 /* carousel Section*/
+.carousel-main{
+    background-color: pink;
+}
 .carousel{
     display: flex;
     justify-content: center;
