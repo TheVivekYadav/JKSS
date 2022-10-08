@@ -113,13 +113,20 @@ ul li{
     place-items: center;
     place-content: center;
     padding: 10px 20px;
-}.section-two{
+    border-top: 1px solid pink;
+    border-left: 10px solid pink;
+    border-bottom: 1px solid pink;
+}
+.section-two{
     grid-area: two;
     display: grid;
     grid-template-columns: 2fr 1fr;
     place-items: center;
     place-content: center;
     padding: 10px 20px;
+    border-top: 1px solid pink;
+    border-left: 10px solid pink;
+    border-bottom: 1px solid pink;
 }
 .section-three{
     height: 250px;
@@ -148,6 +155,10 @@ ul li{
 
 div .text{
     font-size: 10px;
+    padding: 0px 10px;
+    border-top: 5px solid pink;
+    /* border-left: 1px solid red; */
+    border-bottom: 1px solid pink;
 }
 
 /* media queries for sections */
@@ -277,4 +288,12 @@ div .text{
         justify-content: left;
         gap: 2rem;
     }
+}
+
+.form1{
+    display: grid;
+    gap: 1rem;
+}
+.logo-image{
+    width: clamp(1rem,50vw,20rem);
 }
