@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&display=swap');
+
+.container{
+    height: 100vh;
+}
+.heading{
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.content{
+    padding: 10px 100px;
+}

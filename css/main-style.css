@@ -1,0 +1,169 @@
+:root {
+    --primary-clr-900: rgba(0, 0, 0, 0.329);
+    --primary-clr-500: grey;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 20px;
+}
+
+/* Top Bar Section */
+.topbar {
+    display: none;
+}
+/* media queriess for top bar */
+
+@media (min-width:60em) {
+    .topbar {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 10px 20px;
+    }
+
+    .phone-number {
+        display: flex;
+        gap: 5rem;
+    }
+
+    .helpful-links {
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+        justify-content: right;
+    }
+
+}
+
+/* Navigation Bar Section */
+.nav {
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.nav-menu {
+    display: none;
+}
+
+.hamburger {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.hamburger-image {
+    width: 32px;
+    height: 30px;
+}
+
+.nav-menu ul li a {
+    padding: 10px 20px;
+}
+
+.nav-menu ul li a:hover {
+    background-color: var(--primary-clr-500);
+    color: #fff;
+    transition: 500ms;
+}
+
+/* media queriess for navigation bar */
+
+@media (min-width:60em) {
+    .nav {
+        padding: 10px 20px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .nav-menu ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+}
+/* footbar Section */
+.footbar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 35% 30% auto;
+    padding: 10px 20px;
+    bottom: 0;
+}
+
+.footbar>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* media queries */
+@media (max-width:50em) {
+    .footbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px 20px;
+        gap: 2rem;
+
+    }
+
+    .footbar>div {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 2rem;
+    }
+}
+
+/* form area */
+.form1 {
+    display: grid;
+    gap: 1rem;
+}
+
+.logo-image {
+    width: clamp(1rem, 50vw, 20rem);
+}
+
+.form1 input {
+    border: none;
+}
+
+.form1 div.input {
+    border: 1px solid black;
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
