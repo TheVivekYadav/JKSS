@@ -2,7 +2,7 @@
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 80vw;
+    max-width: 96vw;
     position: relative;
     margin: auto;
   }
@@ -55,6 +55,10 @@
     padding: 8px 12px;
     position: absolute;
     top: 0;
+  }
+  .numbertext ~ img{
+    height: 50vw;
+
   }
   
   /* The dots/bullets/indicators */
