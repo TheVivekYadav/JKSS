@@ -1,8 +1,4 @@
-:root{
-	--blue-light:rgb(0 0 255 /.7);
-    --primary-clr-900: rgba(0, 0, 255, 0.3);
-    --primary-clr-500: rgb(0 0 255 /.7);
-}
+
 * {box-sizing:border-box}
 html{
 	 scroll-behavior: smooth;
@@ -176,6 +172,16 @@ div .text {
 	font-family: Sofia;
 }
 
+
+.section-three li::marker,
+.section-four li::marker{
+    content: '→'; 
+}
+.section-three li a:hover,
+.section-four li a:hover{
+    text-decoration: underline;
+}
+
 /* media queries for sections */
 @media (max-width:50em) {
     .sections {
@@ -273,14 +279,12 @@ div .text {
 }
 
 .content ul {
-    /* margin-right: 10px; */
-    /* background-color: #fff; */
     padding: 10px 20px;
     height: 100%;
 }
 
 .content ul li a {
-    color: #fff;
+    color: #000;
 }
 
 .carousel-main {
@@ -306,4 +310,10 @@ div .text {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/* active navigation bar */
+
+.nav-menu ul li .active{
+    background-color: red;
+    color: #fff;
 }

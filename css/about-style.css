@@ -11,3 +11,10 @@
 .content{
     padding: 10px 100px;
 }
+
+/* active navigation bar */
+
+.nav-menu ul li .active{
+    background-color: red;
+    color: #fff;
+}
