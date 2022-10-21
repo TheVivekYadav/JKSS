@@ -156,7 +156,6 @@ ul li a{
     .footbar {
         display: grid;
         grid-template-columns: 1fr;
-        padding: 10px 20px;
         place-items: center;
 
     }
@@ -166,6 +165,9 @@ ul li a{
         align-items: center;
         justify-content: center;
         gap: 2rem;
+    }
+    .form1{
+        border-top: 1px solid #fff;
     }
 }
 
