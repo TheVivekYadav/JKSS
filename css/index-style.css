@@ -1,5 +1,7 @@
 * {box-sizing:border-box}
-
+html{
+	 scroll-behavior: smooth;
+}
 /* Slideshow container */
 .slideshow-container {
     max-width: 96vw;
@@ -87,6 +89,7 @@
     from {opacity: .4}
     to {opacity: 1}
   }
+
 
 
 /* More Section here */
