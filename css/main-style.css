@@ -3,8 +3,9 @@
     --primary-clr-100: rgb(0, 0, 0);
     --primary-clr-900: rgba(255, 0, 0, .1);
     --primary-clr-500: rgba(255, 0, 0, 0.774);
-    --primary-clr-1000:rgb(255 0 0/.9)
+    --primary-clr-1000:rgb(255 0 0/.3);
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -206,7 +207,7 @@ input[type=email]{
   
   input[type=submit] {
     width: 100%;
-    background-color: var(--primary-clr-900);
+    background-color: var(--primary-clr-1000);
     color: white;
     padding: 10px 20px;
     margin: 8px 0;

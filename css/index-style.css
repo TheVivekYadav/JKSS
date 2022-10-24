@@ -293,7 +293,8 @@ div .text {
 }
 
 .carousel-main {
-    background-color: var(--primary-clr-1000);
+    background-color: var(--primary-clr-500);
+    font-family: 'Roboto Mono', monospace;
 }
 
 .carousel {
