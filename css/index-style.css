@@ -88,30 +88,25 @@ html{
 
 /* More Section here */
 
+
 .section{
     background-color: white !important;
 }
 
 .sections>div {
     /* height: 300px; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
-.section>div {
-    /* padding: 5px 10px; */
-    border-radius: 10px;
-}
 
 .sections {
-    /* margin-top: 15px; */
     display: grid;
-    gap: 2rem;
     grid-template-areas: 'one two' 'three four';
-    padding: 1px 10px;
     grid-template-columns: 1fr 1fr;
     background-image:url(../images/4.jpeg);
     background-size: cover;
     background-attachment: fixed;
+    padding: 0 !important;
 }
 .section-one {
     grid-area: one;
@@ -136,7 +131,7 @@ html{
     border-left: 10px solid var(--primary-clr-500);
     border-right: 10px solid var(--primary-clr-500);
     border-bottom: 5px solid var(--primary-clr-500);
-    border-radius: 10%;
+    /* border-radius: 10%; */
     background-color: var(--primary-clr-900);
 }
 
@@ -145,7 +140,7 @@ html{
     border-left: 10px solid var(--primary-clr-500);
     border-right: 10px solid var(--primary-clr-500);
     border-bottom: 5px solid var(--primary-clr-500);
-    border-radius: 10%;
+    /* border-radius: 10%; */
     background-color: var(--primary-clr-900);
 }
 
@@ -155,7 +150,7 @@ html{
     width: 130px;
     /* box-shadow: 0px 0px 4px 4px var(--primary-clr-100); */
     transition: 100ms;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 }    
 
 .Rahul_Sir:hover,
@@ -200,7 +195,7 @@ div .text {
     .section-one {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
+        /* gap: 1rem; */
     }
 
     .section-two .img {
@@ -215,14 +210,14 @@ div .text {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: 'one' 'two';
-        gap: 1rem;
+        /* gap: 1rem; */
     }
 }
 
 @media (min-width:60em) {
     .sections {
         display: grid;
-        gap: 2rem;
+        /* gap: 2rem; */
         padding: 10px 20px;
         grid-template-columns: 3fr 1fr;
         grid-template-areas: 'one three' 'two four';
@@ -250,14 +245,14 @@ div .text {
         height: 250px;
         grid-area: three;
         position: relative;
-        border-radius: 10%;
+        /* border-radius: 10%; */
     }
 
     .section-four {
         height: 250px;
         grid-area: four;
         position: relative;
-        border-radius: 10%;
+        /* border-radius: 10%; */
     }
 
     .Rahul_Sir:hover,
