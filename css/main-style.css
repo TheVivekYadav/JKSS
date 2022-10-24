@@ -145,10 +145,8 @@ ul li a{
 }
 /* footbar Section */
 .footbar {
-    position: relative;
     display: grid;
     grid-template-columns: 35% 30% auto;
-    bottom: 0;
     place-items: center;
     background-color: #fff;
 
