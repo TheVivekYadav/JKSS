@@ -93,10 +93,6 @@ html{
     background-color: white !important;
 }
 
-.sections>div {
-    /* height: 300px; */
-    /* border-radius: 10px; */
-}
 
 
 .sections {
@@ -186,7 +182,6 @@ div .text {
     }
     .sections {
         display: grid;
-        gap: 0.25rem;
         padding: 10px 20px;
         grid-template-areas: 'one' 'two' ,'three' 'four';
         grid-template-columns: 1fr 1fr;
