@@ -1,3 +1,76 @@
+.wrapper{
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.get-in-touch{
+    font-size: 5rem;
+}
+.header{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+.content{
+    background-color: aqua;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.content > div{
+    width: 25rem;
+    height: 10rem;
+    padding: 10px 20px;
+    display: grid;
+    place-content: center;
+    height: 60vh;
+    gap: 2rem;
+}
+/* .inputboxes-area,
+.textarea-for-comment{
+
+} */
+.inputboxes-area{
+    padding: 20px 10px;
+}
+
+.inputboxes-area > div > input{
+    background-color: grey;
+    width: 25rem;
+    height: 4rem;
+}
+
+.textarea-for-comment > div{
+    background-color: grey;
+    width:25rem ;
+    height: 20rem;
+}
+input::placeholder,
+input{
+    color: #fff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+.button{
+    width: 10rem;
+    margin-bottom: 20px;
+}
+
+
+
 
 /* active navigation bar */
 
