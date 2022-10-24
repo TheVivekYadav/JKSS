@@ -272,14 +272,18 @@ div .text {
     width: 100%;
     line-height: 2.25rem;
 }
-
 .content ul {
     padding: 10px 20px;
-    height: 100%;
 }
 
 .content ul li a {
     color: #fff;
+}
+
+@media (min-width:50em){   
+.marquee{
+    height: 200px;
+}
 }
 
 .carousel-main {
