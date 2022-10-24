@@ -1,15 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500&display=swap');
+.topbar{
+    display: none;
+}
 
 .container{
     height: 100vh;
 }
-.heading{
+h1.heading{
     text-align: center;
-    font-size: 5rem;
+    font-size: 8rem;
     font-family: 'Be Vietnam Pro', sans-serif;
+    background-image: linear-gradient(red, green, blue);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 .content{
     padding: 10px 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo img{
+    margin-right: 10px;
+    width: 10rem;
+    float: left;
 }
 
 /* active navigation bar */
