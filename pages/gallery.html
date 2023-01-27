@@ -9,9 +9,11 @@
     <title>JKSS - GALLERY</title>
     <link rel="stylesheet" href="..//css/gallery-style.css">
     <link rel="stylesheet" href="..//css/main-style.css">
-
+    <link rel="stylesheet" href="..//css/loading_screen.css">
+    <script src="..//js/loading_screen.js"></script>
 </head>
 
+<hr><div id="loading-screen"><img src="../images/logo.svg"></div>
 <body>
     <header>
         <div class="topbar" style="display:none;">
@@ -26,7 +28,7 @@
             </div>
         </div>
         <nav class="nav">
-            <div class="logo"><a href="#"><img class="logo-image" src="../images/logo.svg" alt="JKSS"></a></div>
+            <div class="logo"><a href="#"><img class="logo-image" id="loading-image" src="../images/logo.svg" alt="JKSS"></a></div>
             <div class="nav-menu">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -37,8 +39,8 @@
                 </ul>
             </div><a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
-            <div class="hamburger"><img class="hamburger-image" src="../images/icon-hamburger.svg" alt=""></div>
-        </a>
+                <div class="hamburger"><img class="hamburger-image" src="../images/icon-hamburger.svg" alt=""></div>
+            </a>
         </nav>
         <div class="hamnav">
             <div id="myLinks">
@@ -50,28 +52,10 @@
             </div>
         </div>
     </header>
-    <main><h1>Image Gallery of JKSS</h1><hr>
-        <div id="gallery" class="container-fluid">  
-          <img src="https://source.unsplash.com/1600x1200?female,portrait" class="img-responsive">
-          <img src="https://source.unsplash.com/1024x768?female,portrait" class="img-responsive">
-           <img src="https://source.unsplash.com/1366x768?female,portrait" class="img-responsive">
-          <video class="vid" controls>
-            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
-            </source>
-          </video>
-          <img src="https://source.unsplash.com/1920x1080?female,portrait" class="img-responsive">
-          <img src="https://source.unsplash.com/640x360?female,portrait" class="img-responsive">
-        <img src="https://source.unsplash.com/320x640?female,portrait" class="img-responsive">
-          <img src="https://source.unsplash.com/1200x1600?female,portrait" class="card img-responsive">
-          <img src="https://source.unsplash.com/800x600?female,portrait" class="img-responsive">
-          <img src="https://source.unsplash.com/600x800?female,portrait" class="img-responsive">
-          <img src="https://source.unsplash.com/400x600?female,portrait" class="img-responsive">
-          <img src="https://source.unsplash.com/600x400?female,portrait" class="img-responsive">
-        <img src="https://source.unsplash.com/1100x1600?female,portrait" class="img-responsive">
-        <img src="https://source.unsplash.com/1600x1100?female,portrait" class="img-responsive">
-        <img src="https://source.unsplash.com/992x768?female,portrait" class="img-responsive">
-        <img src="https://source.unsplash.com/768x992?female,portrait" class="img-responsive">
-        
+    <main>
+        <h1>Image Gallery of JKSS</h1>
+        <div id="gallery" class="container-fluid">
+
         </div>
     </main>
     <div class="footbar">
@@ -100,7 +84,43 @@
             </form>
         </div>
     </div>
+    <script>
+    let numOfPhotos = 93;
+        let numOfVideos = 8;
+        
+        let images = [];
+        let videos = [];
+        let imageCount = 0;
+        let videoCount = 0;
+        
+        for (let i = 1; i <= numOfPhotos; i++) {
+            images[i] = new Image();
+            images[i].src = `../photos/1 (${i}).jpg`;
+            images[i].onload = function() {
+                imageCount++;
+                if(imageCount + videoCount === numOfPhotos + numOfVideos) {
+                    document.getElementById("loading-screen").style.display = "none";
+                }
+            }
+            document.getElementById("gallery").appendChild(images[i]);
+        }
+        
+        for (let i = 1; i <= numOfVideos; i++) {
+            videos[i] = document.createElement("video");
+            videos[i].src = `../videos/1 (${i}).mp4`;
+            videos[i].classList.add("vid");
+            videos[i].setAttribute("controls", "");
+            videos[i].onloadeddata = function() {
+                videoCount++;
+                if(imageCount + videoCount === numOfPhotos + numOfVideos) {
+                    document.getElementById("loading-screen").style.display = "none";
+                }
+            }
+            document.getElementById("gallery").appendChild(videos[i]);
+        }
+        
 
+    </script>
 </body>
 
 </html>
