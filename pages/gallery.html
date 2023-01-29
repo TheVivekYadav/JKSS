@@ -54,7 +54,7 @@
     </header>
     <main>
         <h1>Image Gallery of JKSS</h1>
-        <div id="gallery" class="container-fluid">
+        <div style="padding: 30px 60px;" id="gallery" class="container-fluid">
 
         </div>
     </main>
@@ -85,9 +85,10 @@
         </div>
     </div>
     <script>
-   let numOfPhotos = 93;
+let numOfPhotos = 93;
 let numOfVideos = 8;
 let currentIndex = 1;
+let videosInserted = 0;
 
 const options = {
   root: null, // the element that is used as the viewport
@@ -97,14 +98,21 @@ const options = {
 
 const observer = new IntersectionObserver(onIntersection, options);
 
-for (let i = 1; i <= numOfPhotos + numOfVideos; i++) {
-  let element = i > numOfPhotos ? document.createElement("video") : document.createElement("img");
-  element.src = ""; // initially set the source to an empty string
-  element.dataset.src = i > numOfPhotos ? `../videos/1 (${i-numOfPhotos}).mp4` : `../photos/1 (${i}).jpg`; // set the data-src attribute to the actual file path
-  element.dataset.srcset = i > numOfPhotos ? `../videos/1 (${i-numOfPhotos}).mp4` : `../photos/1 (${i}).jpg`; // set the data-srcset attribute to the actual file path
-  if(i > numOfPhotos){
+for (let i = 1; i <= numOfPhotos; i++) {
+  let element;
+  if (videosInserted < numOfVideos && Math.random() < (numOfVideos / (numOfPhotos + numOfVideos - i))) {
+    element = document.createElement("video");
+    element.src = ""; // initially set the source to an empty string
+    element.dataset.src = `../videos/1 (${++currentIndex}).mp4`; // set the data-src attribute to the actual file path
+    element.dataset.srcset = `../videos/1 (${currentIndex}).mp4`; // set the data-srcset attribute to the actual file path
     element.classList.add("vid");
     element.setAttribute("controls", "");
+    videosInserted++;
+  } else {
+    element = document.createElement("img");
+    element.src = ""; // initially set the source to an empty string
+    element.dataset.src = `../photos/1 (${currentIndex++}).jpg`; // set the data-src attribute to the actual file path
+    element.dataset.srcset = `../photos/1 (${currentIndex}).jpg`; // set the data-srcset attribute to the actual file path
   }
   element.setAttribute("srcset", element.dataset.srcset); // set the srcset attribute to the data-srcset attribute
   observer.observe(element);
@@ -115,13 +123,10 @@ function onIntersection(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.src = entry.target.dataset.src;
-      console.log(1);
       observer.unobserve(entry.target);
     }
   });
 }
-
-
 
         
 
