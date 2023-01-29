@@ -1,4 +1,4 @@
-window.onload = function(){
+function load(){
     // var logo = document.querySelector('.loading-image');
     // console.log("loading")
     // logo.classList.add('loading');
@@ -8,3 +8,4 @@ window.onload = function(){
     // },5000)
     document.getElementById("loading-screen").style.display = "none";
 }
+setTimeout(load,3000);

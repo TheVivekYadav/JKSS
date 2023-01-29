@@ -85,39 +85,44 @@
         </div>
     </div>
     <script>
-    let numOfPhotos = 93;
-        let numOfVideos = 8;
-        
-        let images = [];
-        let videos = [];
-        let imageCount = 0;
-        let videoCount = 0;
-        
-        for (let i = 1; i <= numOfPhotos; i++) {
-            images[i] = new Image();
-            images[i].src = `../photos/1 (${i}).jpg`;
-            images[i].onload = function() {
-                imageCount++;
-                if(imageCount + videoCount === numOfPhotos + numOfVideos) {
-                    document.getElementById("loading-screen").style.display = "none";
-                }
-            }
-            document.getElementById("gallery").appendChild(images[i]);
-        }
-        
-        for (let i = 1; i <= numOfVideos; i++) {
-            videos[i] = document.createElement("video");
-            videos[i].src = `../videos/1 (${i}).mp4`;
-            videos[i].classList.add("vid");
-            videos[i].setAttribute("controls", "");
-            videos[i].onloadeddata = function() {
-                videoCount++;
-                if(imageCount + videoCount === numOfPhotos + numOfVideos) {
-                    document.getElementById("loading-screen").style.display = "none";
-                }
-            }
-            document.getElementById("gallery").appendChild(videos[i]);
-        }
+   let numOfPhotos = 93;
+let numOfVideos = 8;
+let currentIndex = 1;
+
+const options = {
+  root: null, // the element that is used as the viewport
+  rootMargin: "0px", // margin around the root element
+  threshold: 0.1 // the proportion of the element that needs to be in the viewport before it's considered visible
+};
+
+const observer = new IntersectionObserver(onIntersection, options);
+
+for (let i = 1; i <= numOfPhotos + numOfVideos; i++) {
+  let element = i > numOfPhotos ? document.createElement("video") : document.createElement("img");
+  element.src = ""; // initially set the source to an empty string
+  element.dataset.src = i > numOfPhotos ? `../videos/1 (${i-numOfPhotos}).mp4` : `../photos/1 (${i}).jpg`; // set the data-src attribute to the actual file path
+  element.dataset.srcset = i > numOfPhotos ? `../videos/1 (${i-numOfPhotos}).mp4` : `../photos/1 (${i}).jpg`; // set the data-srcset attribute to the actual file path
+  if(i > numOfPhotos){
+    element.classList.add("vid");
+    element.setAttribute("controls", "");
+  }
+  element.setAttribute("srcset", element.dataset.srcset); // set the srcset attribute to the data-srcset attribute
+  observer.observe(element);
+  document.getElementById("gallery").appendChild(element);
+}
+
+function onIntersection(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.src = entry.target.dataset.src;
+      console.log(1);
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+
+
         
 
     </script>
