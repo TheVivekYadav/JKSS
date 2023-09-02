@@ -88,7 +88,7 @@ input::placeholder {
     margin-right: 30px;
 }
 .nav-menu ul li a{
-    padding: 10px 20px;
+    padding: 10px 13px;
     transition: 200ms ease;
 }
 ul li a{
@@ -204,6 +204,8 @@ ul li a{
 input[type=text],
 input[type=email]{
     padding: 10px 20px;
+    outline: none;
+    border: none;
   }
   
   input[type=submit] {
