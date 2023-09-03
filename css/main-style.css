@@ -252,4 +252,10 @@ input[type=email]{
     color: red;
     transition: 200ms;
   }
+ 
   
+/* active navigation bar */
+  .nav-menu ul li .active{
+    background-color: red;
+    color: #fff;
+}
